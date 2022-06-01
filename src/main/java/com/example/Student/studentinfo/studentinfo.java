@@ -1,89 +1,101 @@
 package com.example.Student.studentinfo;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.sun.javafx.beans.IDProperty;
+//import jdk.nashorn.internal.objects.annotations.Getter;
+//import jdk.nashorn.internal.objects.annotations.Setter;
+import net.sf.jsqlparser.expression.DateTimeLiteralExpression;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.stereotype.Controller;
 
 import java.time.LocalDate;
+import java.util.Date;
+
 //import javax.persitence;
 //@TableName
 //@EntityScan
 
+@TableName("STUD_INFO")
 public class studentinfo {
 
-    private Integer id;
-    private String name;
-    private Integer age;
-    private String email;
-    private LocalDate dob;
+    @TableId(value = "ID", type = IdType.AUTO)
+    private Integer ID;
+    private String STUD_FNAME;
+    private String STUD_MNAME;
+    private String STUD_LNAME;
+    private Integer AGE;
+    private String EMAIL;
+    private Date BIRTHDATE;
 
-    public studentinfo() {
+    public Integer getID() {
+        return ID;
     }
 
-    public studentinfo(Integer id, String name, Integer age, String email, LocalDate dob) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-        this.email = email;
-        this.dob = dob;
+    public String getSTUD_FNAME() {
+        return STUD_FNAME;
     }
 
-    public studentinfo(String name, Integer age, String email, LocalDate dob) {
-        this.name = name;
-        this.age = age;
-        this.email = email;
-        this.dob = dob;
+    public String getSTUD_MNAME() {
+        return STUD_MNAME;
     }
 
-    public Integer getId() {
-        return id;
+    public String getSTUD_LNAME() {
+        return STUD_LNAME;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public Integer getAGE() {
+        return AGE;
     }
 
-    public String getName() {
-        return name;
+    public String getEMAIL() {
+        return EMAIL;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Date getBIRTHDATE() {
+        return BIRTHDATE;
     }
 
-    public Integer getAge() {
-        return age;
+    public void setID(Integer ID) {
+        this.ID = ID;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setSTUD_FNAME(String STUD_FNAME) {
+        this.STUD_FNAME = STUD_FNAME;
     }
 
-    public String getEmail() {
-        return email;
+    public void setSTUD_MNAME(String STUD_MNAME) {
+        this.STUD_MNAME = STUD_MNAME;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setSTUD_LNAME(String STUD_LNAME) {
+        this.STUD_LNAME = STUD_LNAME;
     }
 
-    public LocalDate getDob() {
-        return dob;
+    public void setAGE(Integer AGE) {
+        this.AGE = AGE;
     }
 
-    public void setDob(LocalDate dob) {
-        this.dob = dob;
+    public void setEMAIL(String EMAIL) {
+        this.EMAIL = EMAIL;
+    }
+
+    public void setBIRTHDATE(Date BIRTHDATE) {
+        this.BIRTHDATE = BIRTHDATE;
     }
 
     @Override
     public String toString() {
         return "studentinfo{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", email='" + email + '\'' +
-                ", dob=" + dob +
+                "ID=" + ID +
+                ", STUD_FNAME='" + STUD_FNAME + '\'' +
+                ", STUD_MNAME='" + STUD_MNAME + '\'' +
+                ", STUD_LNAME='" + STUD_LNAME + '\'' +
+                ", AGE=" + AGE +
+                ", EMAIL='" + EMAIL + '\'' +
+                ", BIRTHDATE=" + BIRTHDATE +
                 '}';
     }
 }
+
