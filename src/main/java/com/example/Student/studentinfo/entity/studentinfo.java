@@ -1,16 +1,13 @@
-package com.example.Student.studentinfo;
+package com.example.Student.studentinfo.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.sun.javafx.beans.IDProperty;
+import jdk.nashorn.internal.objects.annotations.Getter;
+import jdk.nashorn.internal.objects.annotations.Setter;
 //import jdk.nashorn.internal.objects.annotations.Getter;
 //import jdk.nashorn.internal.objects.annotations.Setter;
-import net.sf.jsqlparser.expression.DateTimeLiteralExpression;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.stereotype.Controller;
 
-import java.time.LocalDate;
 import java.util.Date;
 
 //import javax.persitence;
@@ -21,6 +18,7 @@ import java.util.Date;
 public class studentinfo {
 
     @TableId(value = "ID", type = IdType.AUTO)
+
     private Integer ID;
     private String STUD_FNAME;
     private String STUD_MNAME;
@@ -28,6 +26,8 @@ public class studentinfo {
     private Integer AGE;
     private String EMAIL;
     private Date BIRTHDATE;
+
+
 
     public Integer getID() {
         return ID;
