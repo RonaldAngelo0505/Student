@@ -3,7 +3,6 @@ server:
   port: 9090
   servlet:
     context-path: /api
-
 # spring设置
 spring:
   application:
@@ -14,4 +13,4 @@ spring:
 mybatis-plus:
   type-aliases-package: com.example.Student.*.entity
   mapper-locations:
-    - classpath*:com/example/Student/module/*/mapper/xml/*.xml
+    - classpath*:com/example/Student/mapper/xml/*.xml
