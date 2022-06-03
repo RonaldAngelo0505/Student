@@ -15,9 +15,10 @@ public class StudentService extends ServiceImpl<Studentinfomapper, studinfo> imp
     @Autowired
     private Studentinfomapper studentinfomapper;
 
-    @Override
+
     public List<studinfo> getDetail(Integer id){
-    return studentinfomapper.getDetail(id);
+
+        return studentinfomapper.getDetail(id);
     }
 
 
