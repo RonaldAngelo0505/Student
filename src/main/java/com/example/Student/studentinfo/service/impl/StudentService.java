@@ -1,6 +1,7 @@
 package com.example.Student.studentinfo.service.impl;
 
 import com.example.Student.studentinfo.entity.studinfo;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import com.example.Student.studentinfo.mapper.Studentinfomapper;
 import com.example.Student.studentinfo.service.IStudentService;
@@ -15,11 +16,15 @@ public class StudentService extends ServiceImpl<Studentinfomapper, studinfo> imp
     @Autowired
     private Studentinfomapper studentinfomapper;
 
-
     public List<studinfo> getDetail(Integer id){
 
         return studentinfomapper.getDetail(id);
     }
 
 
+   /* @Override
+    public List<studinfo> getDetail(studinfo studinfo) {
+        List
+        return;
+    }*/
 }

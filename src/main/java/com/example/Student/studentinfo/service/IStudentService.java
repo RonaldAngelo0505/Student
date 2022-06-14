@@ -8,4 +8,5 @@ import java.util.List;
 public interface IStudentService extends IService<studinfo> {
 List<studinfo> getDetail(Integer id);
 
+  //  List<studinfo> getDetail(studinfo studinfo);
 }

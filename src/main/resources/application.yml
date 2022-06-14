@@ -9,8 +9,10 @@ spring:
     name: application
   profiles:
     active: dev
-
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
 mybatis-plus:
-  type-aliases-package: com.example.Student.*.entity
+  type-aliases-package: com.example.Student.studentinfo.entity
   mapper-locations:
-    - classpath*:com/example/Student/mapper/xml/*.xml
+    - classpath*:com/example/Student/mapper/xml/mapper.xml
